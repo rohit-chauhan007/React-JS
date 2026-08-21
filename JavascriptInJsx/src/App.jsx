@@ -8,6 +8,7 @@ function App(){
     <>
     <h1>pure javascript 2 + 2 = {2 + 2}</h1>
     <h1>Hi {name}</h1>
+    <p>2 *3 {2 * 3}</p>
     
     <p>JSX with curly braces use to pure javascript code write in react {}</p>
     </>
