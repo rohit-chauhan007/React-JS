@@ -1,0 +1,22 @@
+.ProductTab{
+ height: 100vh;
+ width:100%;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ flex-direction: column;
+ background-color: white;
+ gap: 2rem;
+}
+
+.Product{
+    border:2px solid red;
+    height: 200px;
+    width: 400px;
+     text-align: center;
+}
+.Product h1{
+    color: black;
+    font-size: 2rem;
+   
+}
