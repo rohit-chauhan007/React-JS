@@ -1,4 +1,8 @@
 // import { useState } from "react";
+//for use object in state  const [moves,setMoves] = useState({b:1})
+//to access curVal.key 
+//moves.b;
+//rerender obj for change use spread opertor ... and use call back if the new value depend on the older value
 
 import { useState } from "react";
 
