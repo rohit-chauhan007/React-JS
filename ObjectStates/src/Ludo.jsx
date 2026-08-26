@@ -3,7 +3,16 @@
 //to access curVal.key 
 //moves.b;
 //rerender obj for change use spread opertor ... and use call back if the new value depend on the older value
+//for use call in updation 
+/*setMoves({
+...moves,b:b+1;//simple
+})
 
+0r
+setMoves((preVal)={
+return {...preVal,preVal:preVal.b+1}
+})
+*/
 import { useState } from "react";
 
 export function LodoBoard() {
