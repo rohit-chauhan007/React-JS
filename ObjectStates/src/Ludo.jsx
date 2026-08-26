@@ -66,7 +66,7 @@ export function LodoBoard() {
         <p>Green move = {moves.green}</p>
         <button style={{ backgroundColor: "green",fontSize:"1.5rem" }} onClick={updateGreen} >Green</button>
         <p>Red move = {moves.red}</p>
-        <button style={{ backgroundColor: "red" }} onClick={updateRed}>Red</button>
+        <button style={{ backgroundColor: "red",fontSize:"1.5rem" }} onClick={updateRed} >Red</button>
         <p>Yellow move = {moves.yellow} </p>
         <button style={{ backgroundColor: "yellow" }} onClick={updateYellow }>Yellow</button>
       </div>
