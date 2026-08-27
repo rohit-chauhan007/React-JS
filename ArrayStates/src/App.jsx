@@ -19,6 +19,7 @@ function App() {
  function NewArr(){
   return(
     <>
+    <h1>Hello I am Learning Array State</h1>
     <p>{arr}</p>
     </>
   )
