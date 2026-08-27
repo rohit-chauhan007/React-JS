@@ -15,7 +15,7 @@ function App() {
   
  const FruitArr = () =>{
   setFruit((prevFruit) =>{
-    return [prevFruit,"Banana"];
+    return [prevFruit,"Banana","litchi"];
   })
  }
  const Array= () => {
