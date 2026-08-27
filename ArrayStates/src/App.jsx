@@ -3,6 +3,9 @@ import { use, useState } from 'react'
 //IN rendering time array not return new value it return same array 
 //to array retrun new value in rendering use spread (...)
 //if new value depend on older value use set callback
+//setArr((prevArr) =>{
+ // return [...prevArr,"new array"]
+  //})
 
 import './App.css'
 
@@ -21,6 +24,7 @@ function App() {
     <>
     <h1>Hello I am Learning Array State</h1>
     <p>{arr}</p>
+    
     </>
   )
 }
