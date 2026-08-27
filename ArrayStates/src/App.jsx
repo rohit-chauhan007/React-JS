@@ -1,4 +1,8 @@
 import { use, useState } from 'react'
+//Array can we pass in state 
+//IN rendering time array not return new value it return same array 
+//to array retrun new value in rendering use spread (...)
+//if new value depend on older value use set callback
 
 import './App.css'
 
