@@ -11,6 +11,7 @@ import './App.css'
 
 function App() {
  const [arr,setArray] = useState(["banana"])
+ const [fruits,setFruit] = useState(["Apple"])
   
  const Array= () => {
   setArray((prevArr)=>{
@@ -27,6 +28,9 @@ function App() {
     
     </>
   )
+}
+const Fruit = () =>{
+  return  
 }
 
   return (
