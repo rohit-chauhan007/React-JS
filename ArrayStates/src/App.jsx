@@ -13,6 +13,11 @@ function App() {
  const [arr,setArray] = useState(["banana"])
  const [fruits,setFruit] = useState(["Apple"])
   
+ const FruitArr = () =>{
+  setFruit((prevFruit) =>{
+    return [prevFruit,"Banana"];
+  })
+ }
  const Array= () => {
   setArray((prevArr)=>{
     return [...prevArr,"apple"];
@@ -24,7 +29,7 @@ function App() {
   return(
     <>
     <h1>Hello I am Learning Array State</h1>
-    <p>{arr}</p>
+    <p>{fruits}</p>
     
     </>
   )
@@ -36,7 +41,7 @@ const Fruit = () =>{
   return (
     <div>
      <NewArr />
-      <button onClick={Array}>Click</button>
+      <button onClick={FruitArr}>Click</button>
     </div>
   )
 }
