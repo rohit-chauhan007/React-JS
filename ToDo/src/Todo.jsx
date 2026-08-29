@@ -2,10 +2,8 @@ import { useState } from "react"
 
 export default function Todo(){
     const [todo,setTodo] = useState(["sample"]);
-    console.log(todo)
-    const AddTodo = () =>{
-        console.log("click")
-    }
+    const [newTodo,setNewTodo] = ("this is sample");
+    
     return(
         <div className="main">
           <div className="todo-container">
@@ -15,9 +13,12 @@ export default function Todo(){
                 <button onClick={AddTodo}>Add</button>
             </div>
             <div className="todo-lists">
-                
+                 <ul>
+                  {todo.map((todo)=>(
+                    <li>{todo}</li>
+                  ))}
+                 </ul>
             </div>
-
           </div>
         </div>
     )
