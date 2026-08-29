@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.main{
+    height:100vh;
+    width: 100%;
+    background-color:#D6D6FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.todo-container{
+    height: 80%;
+    width: 40%;
+    background-color:#ffffff;
+    border-radius: 12px;
+    border: 1.5px solid #0105FF;
+   
+}
+.todo-container h1{
+  color:black;
+  font-size: 4vw;
+   font-family: "Borel", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.input-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 5px;
+}
+.input-container input{
+    appearance: none !important;
+    border:none;
+    height: 1.2rem;
+    width: 12rem;
+    background-color: #FFFFFF;
+    padding: 4px;
+    border-radius: 5px;
+    color: black;
+    font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  border: 1px solid #0105FF;
+
+    
+}
+.input-container button{
+  height: 1.6rem;
+  width: 3rem;
+  padding: 4px;
+  background-color: #5143EB;
+  appearance: none;
+  border: none;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  border-radius: 5px;
+}
+
+.todo-lists{
+    height:65%;
+    width: 100%;
+    margin-top: 2rem;
+    overflow: hidden;
+}
