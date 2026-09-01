@@ -9,7 +9,7 @@ export default function Todo() {
       if (!newTodo == "") {
         //  setTodo([...todo,{items:newTodo,id:uuidv4()}]);
         setTodo((prev) => {
-          return [...prev, { items: newTodo, id: uuidv4() }];
+          return [...prev, { items: newTodo.toUpperCase(), id: uuidv4() }];
         });
         setNewtodo("");
       }
@@ -20,8 +20,20 @@ export default function Todo() {
     setNewtodo(event.target.value);
   };
 
-  const DeleteTask = () =>{
-    console.log("task delete");
+  const DeleteTask = (id) =>{
+    console.log("click")
+    setTodo(todo.filter((task)=>(
+      task.id != id
+    )))
+  }
+  const UpdateTask = (id) => {
+       let cpy = todo.filter((tasks)=>(
+        tasks.id == id
+        
+       ))
+
+       console.log(cpy);
+      
   }
 
   return (
@@ -43,13 +55,13 @@ export default function Todo() {
             <div className="task-list">
              
               <div className="task">
-                <input className="check" type="checkbox"></input>
+                <input  className="check" type="checkbox"></input>
                 <li key={todo.id}>{todo.items}</li>
               </div>
 
               
-              <div className="iconify">
-                 <div style={{color:"blue"}} className="icon">
+              <div  className="iconify">
+                 <div onClick={()=>{UpdateTask(todo.id)}} style={{color:"blue"}} className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -60,13 +72,13 @@ export default function Todo() {
                   <g fill="currentColor">
                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"
                     />
                   </g>
                 </svg>
               </div>
-              <div onClick={DeleteTask} style={{color:"red"}} className="icon">
+              <div onClick={()=>{DeleteTask(todo.id)}} style={{color:"red"}} className="icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
