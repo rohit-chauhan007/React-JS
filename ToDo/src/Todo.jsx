@@ -1,35 +1,51 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 export default function Todo() {
-  const [todo, setTodo] = useState([]);
+ 
   const [newTodo, setNewtodo] = useState("");
+   const [todo, setTodo] = useState(()=>{
+    const saveTodo = localStorage.getItem("todos");
+  return saveTodo ? JSON.parse(saveTodo) : [];
+   });
 
   const AddTodo = () => {
     {
       if (!newTodo == "") {
         //  setTodo([...todo,{items:newTodo,id:uuidv4()}]);
         setTodo((prev) => {
-          return [...prev, { items: newTodo.toUpperCase(), id: uuidv4() }];
+          const saveTodos =  [...prev, { items: newTodo.toUpperCase(), id: uuidv4() }];
+        localStorage.setItem("todos",JSON.stringify(saveTodos))
+        console.log(localStorage.getItem("todos"));
+          return saveTodos;
         });
         setNewtodo("");
       }
     }
-  };
+ 
+  }
 
   const AddNewTodo = (event) => {
     setNewtodo(event.target.value);
+  
   };
 
+
   const DeleteTask = (id) =>{
-    console.log("click")
-    setTodo(todo.filter((task)=>(
-      task.id != id
-    )))
+  //  const updateTodo =  setTodo(todo.filter((task)=>(
+  //     task.id != id
+  //   )));
+ console.log(id);
+  const updateTodo = todo.filter((task)=>{
+   return task.id != id
+  }) 
+    setTodo(updateTodo);
+    localStorage.setItem("todos",JSON.stringify(updateTodo))
+   
+    
   }
   const UpdateTask = (id) => {
        let cpy = todo.filter((tasks)=>(
         tasks.id == id
-        
        ))
 
        console.log(cpy);
