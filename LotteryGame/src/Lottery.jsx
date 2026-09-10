@@ -15,7 +15,6 @@ export default function Lottery(){
            total = total + number[i];    
         }}
         setSum(total);
-
     }
     
     
