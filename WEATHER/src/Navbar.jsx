@@ -1,11 +1,13 @@
 import "./Navbar.css"
+import Button from '@mui/material/Button';
 export default function Navbar(){
     return (
        <header className="navbar">
         <h1>SkyWard</h1>
         <nav className="navigation">
-            <li><a href="#">Login</a></li>
-             <li><a href="#">Sing up</a></li>
+            <Button variant="outlined">Login</Button> 
+            <Button variant="outlined" color="error">Logout</Button>
+             
         </nav>
        </header>
     )
