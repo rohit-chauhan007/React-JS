@@ -1,0 +1,58 @@
+.weather_info{
+    height:70%;
+    width: 80%;
+    /* background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px) saturate(130%);
+    -webkit-backdrop-filter: blur(18px) saturate(130%); */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border-radius: 18px;
+    margin-top:2rem;
+    padding: 1rem 4vw;
+    position:relative;
+    overflow: hidden;
+    color: white;
+  
+}
+
+.weather_info::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.15),
+        transparent 40%
+    );
+
+    pointer-events: none;
+}
+.weather_locations{
+    height: 40px;
+    width: 100%;
+      display: flex;
+    justify-content: space-between;
+
+}
+.weather_location_info{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    height: 30px;
+    width: auto;
+    gap:0.3rem;
+     background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px) saturate(130%); 
+     -webkit-backdrop-filter: blur(18px) saturate(130%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    font-size: 0.5rem;
+}
+.weather_date_info{
+    font-size: clamp(1.8rem,1.5vw,1vw);
+    color: white;
+}
