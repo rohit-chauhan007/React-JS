@@ -12,7 +12,6 @@
     position:relative;
     overflow: hidden;
     color: white;
-  
 }
 
 .weather_info::before {
@@ -55,4 +54,20 @@
 .weather_date_info{
     font-size: clamp(1.8rem,1.5vw,1vw);
     color: white;
+}
+
+.weather_temp{
+    height:160px;
+    width: 100%;
+    background-color: red;
+}
+.weather_forcast_img{
+    height:100%;
+    width: 200px;
+    margin-top: 2.5rem;
+}
+
+.weather_forcast_img img{
+    height: 100%;
+    object-fit: cover;
 }
