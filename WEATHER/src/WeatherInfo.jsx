@@ -3,6 +3,7 @@ import "./WeatherInfo.css";
 import myFunction from "./date";
 import { Icon } from "@iconify/react";
 import weatherImage from "./assets/weather.png";
+import WeatherCard from "./WeatherCard";
 
 export default function WeatherInfo({ location = "Delhi" }) {
 
@@ -28,7 +29,18 @@ export default function WeatherInfo({ location = "Delhi" }) {
                 <div className="weather_forcast_img">
                     <img src={weatherImage} />
                 </div>
+               <div className="weather_temprature">
+                <h2>28℃</h2>
+               </div>
             </div>
+        {/* weather_card_component */}
+        <div className="weather_card">
+            <WeatherCard />
+            <WeatherCard />
+            <WeatherCard />
+            <WeatherCard />
+        </div>
+           
         </div>
     );
 }

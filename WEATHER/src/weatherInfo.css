@@ -59,7 +59,10 @@
 .weather_temp{
     height:160px;
     width: 100%;
-    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
 }
 .weather_forcast_img{
     height:100%;
@@ -70,4 +73,18 @@
 .weather_forcast_img img{
     height: 100%;
     object-fit: cover;
+}
+.weather_temprature h2{
+    font-size: clamp(16px,5vw,4.5vw);
+    /* font-family: serif; */
+    font-weight: 400;
+}
+.weather_card{
+    height: 54%;
+    width: 100%;
+    margin-top: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
 }
