@@ -19,25 +19,30 @@ export default function Searchbar({ setLocation }) {
   const url = `${API_URL}?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
   const handleChange = (evt) => {
+    console.log("calling handlechange");
     setCity(evt.target.value);
   };
 
   //callling geocoding api
   const lonLat = async () => {
+    console.log("lonlat");
     const response = await fetch(geocoding_url);
     const data = await response.json();
     console.log(data);
     setLatitude(data[0].lat);
     setLongatude(data[0].lon)
+    console.log("weather api called");
     WeatherApi();
   };
   //weather api calling 
   const WeatherApi = async() =>{
+    console.log("calling weatherapi");
     const response = await fetch(url);
     const data = await response.json();
     console.log("called weather api",data)
   }
   const handleSubmit = async (evt) => {
+    console.log("calling handle submit");
     lonLat();
     evt.preventDefault();
     {

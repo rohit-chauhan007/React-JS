@@ -45,7 +45,7 @@ export default function WeatherCard(){
 
     <Typography sx={{ fontSize:{
         xs:15,
-        sm:30
+        sm:30  
     } }}>
       24°C
     </Typography>
