@@ -5,8 +5,8 @@ import { Icon } from "@iconify/react";
 import weatherImage from "./assets/weather.png";
 import WeatherCard from "./WeatherCard";
 
-export default function WeatherInfo({ location = "Delhi" }) {
-
+export default function WeatherInfo({ location = "Delhi" ,weather }) {
+console.log(weather)
     const date = myFunction();
 
     return (
@@ -30,7 +30,7 @@ export default function WeatherInfo({ location = "Delhi" }) {
                     <img src={weatherImage} />
                 </div>
                <div className="weather_temprature">
-                <h2>28℃</h2>
+                {!weather ? <p></p> : <h2>{Math.floor(weather.main.temp)}</h2>}
                </div>
             </div>
         {/* weather_card_component */}

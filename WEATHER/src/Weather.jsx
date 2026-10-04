@@ -5,12 +5,15 @@ import WeatherInfoContainer from './WeatherInfoContainer'
 import { useState } from 'react'
 export default function Weather(){
     const [location,setLocation] = useState("");
+    const [weather,setWeather] = useState(null);
+    console.log(weather)
+    
 
      return(
         <div className="main">
             <Navbar/>
-            <Searchbar setLocation={setLocation} />
-            <WeatherInfoContainer location={location}  />
+            <Searchbar setLocation={setLocation} setWeather ={setWeather} />
+            <WeatherInfoContainer location={location}  weather={weather} />
         </div>
      )
 }

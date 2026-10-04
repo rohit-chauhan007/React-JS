@@ -7,15 +7,17 @@ console.log(GEOCODING_API_URL);
 
 import Button from "@mui/material/Button";
 import { useState } from "react";
-export default function Searchbar({ setLocation }) {
-  const [city, setCity] = useState("");
+export default function Searchbar({ setLocation ,setWeather}) {
+  
   const [longatude,setLongatude] = useState(null);
   const [latitude,setLatitude] = useState(null);
+  const [city, setCity] = useState("");
   const cities = city;
   const limit = 1;
-  const geocoding_url = `${GEOCODING_API_URL}?q=${cities}&limit=${limit}&appid=${API_KEY}`;
+  //long lan
   const lat = latitude;
   const lon = longatude;
+  const geocoding_url = `${GEOCODING_API_URL}?q=${cities}&limit=${limit}&appid=${API_KEY}`;
   const url = `${API_URL}?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
   const handleChange = (evt) => {
@@ -23,6 +25,19 @@ export default function Searchbar({ setLocation }) {
     setCity(evt.target.value);
   };
 
+  
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+     lonLat();
+    {
+      if (city == "") {
+        setCity(location);
+      } else {
+        setLocation(city);
+      }
+    }
+    setCity("");
+  };
   //callling geocoding api
   const lonLat = async () => {
     console.log("lonlat");
@@ -39,21 +54,12 @@ export default function Searchbar({ setLocation }) {
     console.log("calling weatherapi");
     const response = await fetch(url);
     const data = await response.json();
-    console.log("called weather api",data)
+    setWeather(data)
+    {if(data.code == 400){
+      console.log(daz)
+    }}
   }
-  const handleSubmit = async (evt) => {
-    console.log("calling handle submit");
-    lonLat();
-    evt.preventDefault();
-    {
-      if (city == "") {
-        setCity(location);
-      } else {
-        setLocation(city);
-      }
-    }
-    setCity("");
-  };
+  
 
   return (
     <form onSubmit={handleSubmit}>
