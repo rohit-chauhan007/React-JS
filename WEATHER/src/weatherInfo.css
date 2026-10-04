@@ -98,5 +98,8 @@
         height: 80%;
         width: 200px;
     }
-    
+    .weather_temprature h2{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
 }
