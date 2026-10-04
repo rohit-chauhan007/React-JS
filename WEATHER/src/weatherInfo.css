@@ -89,3 +89,9 @@
     justify-content: space-evenly;
 
 }
+/*mobile responsive*/
+@media (max-width:600px){
+    .weather_info{
+        background-color: red;
+    }
+}
