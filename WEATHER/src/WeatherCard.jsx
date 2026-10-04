@@ -7,7 +7,7 @@ export default function WeatherCard({title,value}){
           <Card
   sx={{
         width: {
-      xs: 60,
+      xs: 70,
       sm: 120,
       md: 150,
     },
