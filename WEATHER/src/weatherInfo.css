@@ -92,6 +92,6 @@
 /*mobile responsive*/
 @media (max-width:600px){
     .weather_info{
-        background-color: red;
+        width: 90%;
     }
 }
