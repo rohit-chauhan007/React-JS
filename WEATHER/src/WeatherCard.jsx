@@ -1,7 +1,7 @@
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
-export default function WeatherCard(){
+export default function WeatherCard({title,value}){
     return (
         <div className='card'>
           <Card
@@ -40,14 +40,14 @@ export default function WeatherCard(){
        xs:12,
        sm:18
     } }}>
-      Feels like
+    {title}
     </Typography>
 
     <Typography sx={{ fontSize:{
         xs:15,
         sm:30  
     } }}>
-      24°C
+      {Math.floor(value)}
     </Typography>
   </CardContent>
 </Card>

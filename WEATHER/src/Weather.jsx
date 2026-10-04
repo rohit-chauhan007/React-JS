@@ -6,9 +6,6 @@ import { useState } from 'react'
 export default function Weather(){
     const [location,setLocation] = useState("");
     const [weather,setWeather] = useState(null);
-    console.log(weather)
-    
-
      return(
         <div className="main">
             <Navbar/>

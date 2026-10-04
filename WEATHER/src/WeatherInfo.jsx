@@ -6,7 +6,7 @@ import weatherImage from "./assets/weather.png";
 import WeatherCard from "./WeatherCard";
 
 export default function WeatherInfo({ location = "Delhi" ,weather }) {
-console.log(weather)
+
     const date = myFunction();
 
     return (
@@ -27,18 +27,19 @@ console.log(weather)
 
             <div className="weather_temp">
                 <div className="weather_forcast_img">
-                    <img src={weatherImage} />
+                    {!weather ? <p></p> :<img src={weatherImage} /> }
                 </div>
                <div className="weather_temprature">
-                {!weather ? <p></p> : <h2>{Math.floor(weather.main.temp)}</h2>}
+                {!weather ? <p></p> : <h2>{Math.floor(weather.main.temp)}°C</h2>}
                </div>
             </div>
         {/* weather_card_component */}
         <div className="weather_card">
-            <WeatherCard />
-            <WeatherCard />
-            <WeatherCard />
-            <WeatherCard />
+            
+          {!weather ? <p></p>:<WeatherCard title={"feels like"} value={`${weather.main.feels_like} °C`}/>}
+           {!weather ? <p></p>:<WeatherCard title={"Humidity"} value={weather.main.humidity}/>}
+            {!weather ? <p></p>:<WeatherCard title={"Wind"} value={weather.wind.speed}/>}
+             {!weather ? <p></p>:<WeatherCard title={"feels like"} value={weather.main.feels_like}/>}
         </div>
            
         </div>

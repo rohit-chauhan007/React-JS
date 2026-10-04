@@ -73,6 +73,7 @@
 .weather_forcast_img img{
     height: 100%;
     object-fit: cover;
+    transition: all 1s  ease-in-out 0.3;
 }
 .weather_temprature h2{
     font-size: clamp(16px,5vw,4.5vw);
