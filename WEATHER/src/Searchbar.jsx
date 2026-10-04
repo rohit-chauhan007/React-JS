@@ -49,6 +49,7 @@ export default function Searchbar({ setLocation, setWeather }) {
     const response = await fetch(url);
     const Weatherdata = await response.json();
     console.log(Weatherdata);
+    console.log(Weatherdata)
      {
       if(Weatherdata.cod == "400"){
         console.log(Weatherdata.message);

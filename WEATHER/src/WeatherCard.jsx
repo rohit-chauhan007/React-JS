@@ -47,7 +47,7 @@ export default function WeatherCard({title,value}){
         xs:15,
         sm:30  
     } }}>
-      {Math.floor(value)}
+     {value}
     </Typography>
   </CardContent>
 </Card>
