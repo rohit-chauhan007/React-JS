@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/rohit-chauhan007/React-JS/issues"
   },
-  "homepage": "https://github.com/rohit-chauhan007/React-JS#readme"
+  "homepage": "https://github.com/rohit-chauhan007/React-JS#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.13.0",
+    "react-redux": "^9.3.0"
+  }
 }
