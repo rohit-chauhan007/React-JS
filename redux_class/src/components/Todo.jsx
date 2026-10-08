@@ -6,7 +6,7 @@ export default function Todo(){
    return (
     <>
     <h1 style={{color:"blue"}}>Todo list </h1>
-      {todos.map((todo) => <ul>{todo.task}</ul>)}
+      {todos.map((todo,id) => <ul key={id}>{todo.task}</ul>)}
     
     </>
    )
