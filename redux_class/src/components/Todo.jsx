@@ -1,7 +1,7 @@
 export default function Todo(){
    return (
     <>
-    <h3>Todo list </h3>
+    <h1 style={{color:"blue"}}>Todo list </h1>
     </>
    )
 }
