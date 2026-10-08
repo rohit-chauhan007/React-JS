@@ -1,10 +1,35 @@
 //reducer
-import { createSlice } from '@reduxjs/toolkit';
-const intialState = {
-    todo:[{id:"123",task:"code",isDone:false}],
+import { createSlice, nanoid } from '@reduxjs/toolkit';
+
+const initialState = {
+    todos:[{id:"123",task:"working",isDone:false}]
 };
-export const todoSlice = createSlice({
-    name:"todo",
+
+const todoSlice = createSlice({
+    name:"todo",//name of the slice
     initialState,
-    
-})
+    reducers : {
+        //action define here jo kaam krna hai (like add delete);
+        addTodo : (state,action) => {
+            const newTodo  = {
+                id:nanoid(),
+                task:action.payload,
+                isDone:false
+            };
+            state.todos.push(newTodo)//redux gives us power that push in array without distructring
+        },
+        deleteTodo : (state,action) => {
+            state.todos = state.todos.fillter((todo) => state.todos !== todo);
+        },
+        markDone : (state,action) =>{
+            state.todos = state.todos.map((todo)=>{
+                if(todo.id === action.payload){
+                  todo.isDone = true;
+                };
+            });
+        },
+    }
+});
+
+export const  {addTodo,deleteTodo,markDone} = todoSlice.actions;
+export default todoSlice.reducer;
