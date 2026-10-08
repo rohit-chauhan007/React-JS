@@ -1,4 +1,4 @@
-export default function AddTodo(){
+export default function Todo(){
    return (
     <>
     <h3>Todo list </h3>
