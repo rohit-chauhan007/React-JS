@@ -1,5 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
+import todoReducer from '../features/todos/todoSlice';
 
 export const store = configureStore({
-    reducer:{}//empty like event handler
+    reducer:todoReducer,//empty like event handler
 });
