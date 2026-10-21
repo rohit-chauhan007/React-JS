@@ -8,13 +8,13 @@ export default function AddTodoForm(){
   const dispatch = useDispatch();
    const submitHandler = (evt) =>{
     evt.preventDefault();
-    dispatch(addTodo(task));
+     dispatch(addTodo(task));
    }
     return (
     <>
       <form onSubmit={submitHandler}>
         <input onChange={(e) => setTask(e.target.value)} type="text" ></input>
-        <button >Add</button>
+        <button>Add</button>
       </form>
     </>
     )
